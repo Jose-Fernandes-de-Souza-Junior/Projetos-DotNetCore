@@ -1,0 +1,95 @@
+Estruturas do código c#:
+
+"using System" - Biblioteca padrão com as funções básicas da linguagem (ex: Console.WriteLine() que serve para printar)
+
+
+"namespace" - agrupamento de classes relacionadas. o codigo pode funcionar sem ele, mas por questão de boas práticas utilizamos para nomear o projeto referente ao código.
+
+"class" - É o nome da classe principal. Pode ter o mesmo nome do arquivo para ficar mais facil de identificar, porém não é obrigatório. (EX: class Program
+
+"static void Main (string[] args)" - serve para mostrar onde a aplicação  se inicia (entre point).
+
+Indentação automática = Ctrl + K + D
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Saídas de dados:
+
+"Console.WriteLine" - Insere uma quebra de linha automatica. Para escrever na mesma linha, é só digitar Console.Write.
+
+"Console.WriteLine(saldo.ToString("F2"))" - Serve para arredondar as casas decimais. A quantidade de digitos é determinada através do numero depois do 'F'.
+"Console.WriteLine(saldo.ToString("F4",CultureInfo.InvariantCulture));" - Esta função serve para printar a divisão de casas decimais com ponto.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Aula 20 - Conversão implícita e casting
+Implícita - É a conversão de uma menor para uma maior. Ex: float para double
+Casting - É a conversão de uma maior para uma menor e que sejam diferentes.Ex: double para int
+
+double a;
+float b;
+
+a = 5.1;
+b = (float) a; #Dessa forma o compilador permite rodar
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Aula 22 - Entrada de dados 
+
+"Console.ReadLine()" - input
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Aula 27 - Estrutura Condicional:
+
+if (condição){
+	comando1
+	comando2
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Aula 30 - Funções Sintaxe:
+using System;
+
+namespace Funcoes_Sintaxe
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Digite 3 numeros: ");
+            int n1 = int.Parse(Console.ReadLine());
+            int n2 = int.Parse(Console.ReadLine());
+            int n3 = int.Parse(Console.ReadLine());
+
+            double result = Maior(n1,n2, n3);
+            Console.WriteLine("Maior = "+result);
+
+        }
+
+        static int Maior (int n1, int n2, int n3)
+        {
+            int m;
+
+            if (n1 > n2 && n1>n3) {
+            m = (int)n1;
+            }
+            else if(n2> n3) { 
+             }
+               m = (int)n2;
+            else
+            {
+                m = (int)n3;
+            }
+            return m;
+        }
+    }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Aula 31 -Debugging
+
+F9 - marcar/desmarcar o breakpoint
+F5 - iniciar/continuar o debug
+F10 - executar um passo (pula função)
+F11 - executar um passo (entra na função)
+SHIFT+F11 - sair do método em execução 
+SHIFT+F5 - parar debug
+
+* Janelas
+Watch (expressões personalidades)
+Autos (expressões "interessantes" detectadas pelo Visual Studio)
+Locals (variáveis locais)
+
